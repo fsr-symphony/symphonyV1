@@ -1,1 +1,167 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><title>React App</title><link href="/static/css/1.e9c6373e.chunk.css" rel="stylesheet"><link href="/static/css/main.a0c56ddf.chunk.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script>!function(l){function e(e){for(var r,t,n=e[0],o=e[1],u=e[2],f=0,i=[];f<n.length;f++)t=n[f],p[t]&&i.push(p[t][0]),p[t]=0;for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(l[r]=o[r]);for(s&&s(e);i.length;)i.shift()();return c.push.apply(c,u||[]),a()}function a(){for(var e,r=0;r<c.length;r++){for(var t=c[r],n=!0,o=1;o<t.length;o++){var u=t[o];0!==p[u]&&(n=!1)}n&&(c.splice(r--,1),e=f(f.s=t[0]))}return e}var t={},p={2:0},c=[];function f(e){if(t[e])return t[e].exports;var r=t[e]={i:e,l:!1,exports:{}};return l[e].call(r.exports,r,r.exports,f),r.l=!0,r.exports}f.m=l,f.c=t,f.d=function(e,r,t){f.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},f.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},f.t=function(r,e){if(1&e&&(r=f(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var t=Object.create(null);if(f.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var n in r)f.d(t,n,function(e){return r[e]}.bind(null,n));return t},f.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return f.d(r,"a",r),r},f.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},f.p="/";var r=window.webpackJsonp=window.webpackJsonp||[],n=r.push.bind(r);r.push=e,r=r.slice();for(var o=0;o<r.length;o++)e(r[o]);var s=n;a()}([])</script><script src="/static/js/1.7b4116e4.chunk.js"></script><script src="/static/js/main.c91049bc.chunk.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FSR Symphony</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Michroma|Numans&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="fxstyle.css"> -->
+
+<style>
+
+    .fontone {
+        font-family: 'Michroma', sans-serif;
+    }
+
+    .fonttwo {
+        font-family: 'Numans', sans-serif;
+    }
+</style>
+</head>
+<body style="background-color: black">
+
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-success mb-5">
+        <a class="navbar-brand" href="#">
+            <img src="./images/FSR Logo/fsr.png" width="100" height="70" class="d-inline-block align-top" alt="">    
+        </a>
+        <h3 class="fontone">Symphony Configurator</h3>
+    </nav>
+
+    <div class="container-fluid mt-5">
+        <div class="row mt-5">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 text-center fonttwo text-light">
+                <h2>Design and print a configured Symphony Table Box with a Parts List including MSRP.</h2> 
+                <h2>Choose one of the products below to get started:</h2> 
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 mt-5">
+                <!-- Card Deck 1 -->
+                <div class="card-deck">
+                    <div class="card text-white bg-dark">
+                        <img class="card-img-top" src="./assets/images/clamp-on.jpg" alt="Clamp-ON">
+                        <div class="card-body">
+                            <h3 class="card-title fontone">Clamp-On</h3>
+                            <p class="card-text fonttwo">Clamp-On Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias tempora non consectetur soluta fugit voluptatibus cupiditate. Dolore doloremque inventore laboriosam velit exercitationem perspiciatis dolorum ad ea porro ducimus. Dolorem, porro.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div id="chooseClampOn" class="btn btn-lg btn-block btn-success fontone">Customize</div>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-dark">
+                        <img class="card-img-top" src="./assets/images/in-table.jpg" alt="In-Table">
+                        <div class="card-body">
+                        <h3 class="card-title fontone">In-Table</h3>
+                        <p class="card-text fonttwo">In-Table Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quam consequatur fugiat obcaecati quos quasi nihil. Voluptate temporibus iusto doloremque provident odit asperiores excepturi dolor, alias illum repellendus. Repudiandae, voluptates?</p>
+                        </div>
+                        <div class="card-footer">
+                            <div id="chooseInTable" class="btn btn-lg btn-block btn-success fontone">Customize</div>
+                        </div>
+                    </div>
+                <!-- </div> -->
+                <!-- Card Deck 2 -->
+                <!-- <div class="card-deck mt-3"> -->
+                    <div class="card text-white bg-dark">
+                        <img class="card-img-top" src="./assets/images/under-table.jpg" alt="Under-Table">
+                        <div class="card-body">
+                        <h3 class="card-title fontone">Under-Table</h3>
+                        <p class="card-text fonttwo">Under-Table Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos eveniet ipsum ea amet beatae nulla ipsa dolorum ipsam? Maiores dolor explicabo iste animi aperiam ex magni, voluptates officiis laborum!</p>
+                        </div>
+                        <div class="card-footer">
+                            <div id="chooseUnderTable" class="btn btn-lg btn-block btn-success fontone">Customize</div>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-dark">
+                        <img class="card-img-top" src="./assets/images/dual-in-table.jpg" alt="Dual In-Table">
+                        <div class="card-body">
+                        <h3 class="card-title fontone">Dual In-Table</h3>
+                        <p class="card-text fonttwo">Dual In-Table Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae odio a inventore eaque perspiciatis sapiente necessitatibus animi consequatur minima officia earum commodi, voluptatem labore praesentium voluptatum eum doloribus excepturi asperiores.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div id="chooseDualInTable" class="btn btn-lg btn-block btn-success fontone">Customize</div>
+                        </div>
+                    </div>                    
+                </div>                
+            </div>                
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+    <!-- MODAL TIME -->
+<div class="modal fade bg-dark" id="displayModal" tabindex="-1" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-lg bg-none min-vh-80" role="document">
+        <div class="modal-content rounded " style="background-color: rgba(0, 0, 0, 0.822)">            
+            <div class="modal-header bg-success">
+                <a class="navbar-brand" href="#">
+                    <img src="./images/FSR Logo/fsr.png" width="100" height="70" class="d-inline-block align-top" alt="">    
+                </a>
+                <h1 class="modal-title fontone text-dark text-center shadowed ">Symphony Configurator</h1><br>   
+            </div>   
+
+            <div class="modal-body text-center mt-3">
+                <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
+
+                    <div class="carousel-inner text-center">
+
+                      <div id="info1" class="carousel-item text-white fonttwo active">
+                            <div>
+                                <h3 class="float-center text-white fonttwo">Choose Number of AC slots:</h3>
+                            </div><br/>
+                            <div id="pickSlots"></div>
+                            <br/><br/>
+                      </div>
+
+                      <div id="info2" class="carousel-item text-white fonttwo">
+                            <div>
+                                <h3 class="float-center text-white fonttwo">Select A Product Below: </h3>
+                            </div>
+                            <div id="pickProduct"></div>
+                            <br><br>
+                      </div>
+
+                      <div id="info3" class="carousel-item text-white fonttwo">
+                            <div>
+                                <h3 class="float-center text-white fonttwo">You Selected The Following Product: </h3>
+                                <br />          
+                            </div>
+                            <div id="chosenProdDisp"></div><br />
+                            <div id="displayOptions">
+<!--
+                                <h3><em>>>>>>This text is inside the jQuery target div to display customization choices: (one of the 3 colors, which of the 3 slots, etc)</em></h3>
+-->
+                                <h3><em>></em></h3>
+                            </div>
+                            <br><br>
+                      </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <div class="modal-footer item-center">
+                <a href="/" id="OLDresetBtn" class="btn btn-lg btn-outline-dark btn-block text-light fonttwo close" data-dismiss="modal"><h3>Go Back / Reset Choices</h3></a>
+            </div>
+        </div>
+    </div>
+</div>
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="fxscript.js"></script>
+    <script src="oldscript.js"></script>
+
+
+</body>
+</html>

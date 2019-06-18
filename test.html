@@ -1,0 +1,590 @@
+﻿
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>FSR Symphony</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        #card-cont {
+        }
+
+        #divCardCont {
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .main {
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .body-st {
+            background-image: url("./background.jpg");
+        }
+
+        .sidebar {
+            margin: 0px;
+            background-color: black;
+            color: white;
+        }
+
+        .FSR {
+            border: solid white;
+            padding: 5px;
+            float: left;
+            position: relative;
+        }
+
+        .d-flex {
+            margin: 0px;
+        }
+
+        .navbar-brand {
+            float: left;
+            margin-left: 0px;
+        }
+
+        .hnav {
+            background: #e5e8e7;
+            color: #087504;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .pagTitle {
+            color: white;
+            font-size: 35px;
+            margin: 10px;
+        }
+
+        .sidebar-sticky {
+            margin: 5px;
+        }
+
+        .card:hover {
+            border: solid green;
+        }
+
+        .nav-item:hover {
+            background-color: green;
+        }
+
+        .imgCard {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        #divcontainer {
+            background-color: white;
+            padding: 0px;
+        }
+
+        .cardRow {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .cardRight {
+            float: left;
+        }
+
+        .cardLeft {
+            float: right;
+        }
+
+        .cardOne {
+            position: relative;
+            float: left;
+        }
+
+        .cardTwo {
+            float: right;
+        }
+
+        .cardThree {
+            float: left;
+        }
+
+        .cardFour {
+            float: right;
+        }
+
+        .dropdown-btn, a {
+            /*padding: 6px 8px 6px 16px;*/
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+            .dropdown-btn, a:hover {
+                color: #f1f1f1;
+            }
+
+        .dropdown-container {
+            display: none;
+            background-color: #262626;
+            padding-left: 8px;
+        }
+
+        .fi-caret-bottom {
+            float: right;
+            padding-right: 8px;
+        }
+
+        .catSnap {
+            position: relative;
+            z-index: 2;
+        }
+
+        .drop {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+        }
+
+        #filterOne {
+            position: absolute;
+            top: 114px;
+            left: 1162px;
+            width: 52px;
+            height: 45px;
+            background: #28A745;
+            z-index: 1;
+        }
+
+        #filterTwo {
+            position: absolute;
+            top: 180px;
+            left: 1162px;
+            width: 52px;
+            height: 45px;
+            background: #28A745;
+            z-index: 1;
+        }
+
+        .fsr {
+            height: 10%;
+            width: 10%;
+        }
+
+        .SampleBox {
+            background-color: #262626;
+            border: none;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!--FSR Nav-->
+    <nav class="navbar navbar-dark bg-success shadow-sm">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand">
+                <img src="./images/FSR Logo/fsr.png" class="fsr">
+                <strong class="pagTitle">Symphony Configurator</strong>
+            </a>
+            
+        </div>
+    </nav>
+
+    <!--Side Nav-->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block sidebar">
+                <div class="sidebar-header">
+                    <h3>Steps</h3>
+                </div>
+                <div class="sidebar-sticky">
+                    <button class="dropdown-btn">
+                        Table Options
+                    </button>
+                    <div class="dropdown-container">
+                        <button class="dropdown-btn">
+                            Clamp-On
+                        </button>
+                        <div class="dropdown-container">
+                            <h5>Power Configuration</h5>
+                            <button class="dropdown-btn pconf">
+                                2-AC
+                            </button>
+                            <div class="dropdown-container">
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-2AC-1CA-1SS-ABB/SYM-CL-2AC-1CA-1SS-ABB_allwhite.png">
+                                    <img src="./images/Clamp-On/SYM-CL-2AC-1CA-1SS-ABB/SYM-CL-2AC-1CA-1SS-ABB_allwhite.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-2AC-1CA-1SS-AWW/SYM-CL-2AC-1CA-1SS-ABB_allwhite.png">
+                                    <img src="./images/Clamp-On/SYM-CL-2AC-1CA-1SS-AWW/SYM-CL-2AC-1CA-1SS-ABB_allwhite.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-2AC-1CA-1VGA-2SS-CCC/SYM-CL-2AC-1CA-1VGA-2SS-CCC_allwhite.png">
+                                    <img src="./images/Clamp-On/SYM-CL-2AC-1CA-1VGA-2SS-CCC/SYM-CL-2AC-1CA-1VGA-2SS-CCC_allwhite.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-2AC-1CA-1XLR-2SS-CCC/SYM-CL-2AC-1CA-1XLR-2SS-CCC_allwhite.png">
+                                    <img src="./images/Clamp-On/SYM-CL-2AC-1CA-1XLR-2SS-CCC/SYM-CL-2AC-1CA-1XLR-2SS-CCC_allwhite.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-2AC-1CA-2SS-CCC/SYM-CL-2AC-1CA-2SS-CCC_allwhite.png">
+                                    <img src="./images/Clamp-On/SYM-CL-2AC-1CA-2SS-CCC/SYM-CL-2AC-1CA-2SS-CCC_allwhite.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-2AC-1CA-ABB/SYM-CL-2AC-1CA-ABB_allwhite.png">
+                                    <img src="./images/Clamp-On/SYM-CL-2AC-1CA-ABB/SYM-CL-2AC-1CA-ABB_allwhite.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-2AC-1CA-AWW/SYM-CL-2AC-1CA-ABB_allwhite.png">
+                                    <img src="./images/Clamp-On/SYM-CL-2AC-1CA-AWW/SYM-CL-2AC-1CA-ABB_allwhite.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-2AC-2CA-1SS-CCC/SYM-CL-2AC-2CA-1SS-CCC.png">
+                                    <img src="./images/Clamp-On/SYM-CL-2AC-2CA-1SS-CCC/SYM-CL-2AC-2CA-1SS-CCC_allwhite.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-2AC-2CA-1VGA-2SS-CCC/SYM-CL-2AC-2CA-1VGA-2SS-CCC_allwhite.png">
+                                    <img src="./images/Clamp-On/SYM-CL-2AC-2CA-1VGA-2SS-CCC/SYM-CL-2AC-2CA-1VGA-2SS-CCC_allwhite.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-2AC-2CA-1XLR-2SS-CCC/SYM-CL-2AC-2CA-1XLR-2SS-CCC_allwhite.png">
+                                    <img src="./images/Clamp-On/SYM-CL-2AC-2CA-1XLR-2SS-CCC/SYM-CL-2AC-2CA-1XLR-2SS-CCC_allwhite.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-2AC-2CA-2SS-CCC/SYM-CL-2AC-2CA-2SS-CCC_allwhite.png">
+                                    <img src="./images/Clamp-On/SYM-CL-2AC-2CA-2SS-CCC/SYM-CL-2AC-2CA-2SS-CCC_allwhite.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-2AC-2CA-CCC/SYM-CL-2AC-2CA-CCC_allwhite.png">
+                                    <img src="./images/Clamp-On/SYM-CL-2AC-2CA-CCC/SYM-CL-2AC-2CA-CCC_allwhite.png" alt="3-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-3AC-1CA-1SS-CCC/SYM-CL-3AC-1CA-1SS-CCC_allwhite.png">
+                                    <img src="./images/Clamp-On/SYM-CL-3AC-1CA-1SS-CCC/SYM-CL-3AC-1CA-1SS-CCC_allwhite.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-3AC-1CA-1VGA-2SS-CCC/SYM-CL-3AC-1CA-1VGA-2SS-CCC_allwhite.png">
+                                    <img src="./images/Clamp-On/SYM-CL-3AC-1CA-1VGA-2SS-CCC/SYM-CL-3AC-1CA-1VGA-2SS-CCC_allwhite.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <button class="SampleBox" value="./images/Clamp-On/SYM-CL-3AC-1CA-2SS-CCC/SYM-CL-3AC-1CA-2SS-CCC_allwhite.png">
+                                    <img src="./images/Clamp-On/SYM-CL-3AC-1CA-2SS-CCC/SYM-CL-3AC-1CA-2SS-CCC_allwhite.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                    <h5>Snap-In</h5>
+                                    <div class="ui-widget-content draggable">
+                                        <img src="CAT-5.png" class="catSnap">
+                                    </div>
+                                    <div class="ui-widget-content draggable">
+                                        <img src="CAT-5.png" class="catSnap">
+                                    </div>
+                            </div>
+                            <button class="dropdown-btn">
+                                3-AC
+                            </button>
+                            <div class="dropdown-container">
+                                <button class="dropdown-btn SampleBox" value="2-AC">
+                                    <img src="2-AC.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <div class="dropdown-container">
+                                    <h5>Snap-In</h5>
+                                    <div class="ui-widget-content draggable">
+                                        <img src="CAT-5.png" class="catSnap">
+                                    </div>
+                                    <div class="ui-widget-content draggable">
+                                        <img src="CAT-5.png" class="catSnap">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="dropdown-btn">
+                                4-AC
+                            </button>
+                            <div class="dropdown-container">
+                                <button class="dropdown-btn SampleBox" value="2-AC">
+                                    <img src="2-AC.png" alt="2-AC" class="imgCard " value="2-AC">
+                                </button>
+                                <div class="dropdown-container">
+                                    <h5>Snap-In</h5>
+                                    <div class="ui-widget-content draggable">
+                                        <img src="CAT-5.png" class="catSnap">
+                                    </div>
+                                    <div class="ui-widget-content draggable">
+                                        <img src="CAT-5.png" class="catSnap">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="dropdown-btn">
+                                5-AC
+                            </button>
+                            <div class="dropdown-container">
+                                <button class="dropdown-btn SampleBox" value="images/Clamp-On/SYM-CL-5AC-1SS-CCC/SYM-CL-5AC-1SS-CCC_allwhite.png">
+                                    <img src="images/Clamp-On/SYM-CL-5AC-1SS-CCC/SYM-CL-5AC-1SS-CCC_allwhite.png" alt="5-AC" class="imgCard">
+                                </button>
+                                <div class="dropdown-container">
+                                    <h5>Snap-In</h5>
+                                    <div class="ui-widget-content draggable">
+                                        <img src="CAT-5.png" class="catSnap">
+                                    </div>
+                                    <div class="ui-widget-content draggable">
+                                        <img src="CAT-5.png" class="catSnap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="dropdown-btn">
+                            Under-Table
+                        </button>
+                        <div class="dropdown-container">
+                            <button class="dropdown-btn">
+                                2-AC
+                            </button>
+                            <button class="dropdown-btn">
+                                3-AC
+                            </button>
+                            <button class="dropdown-btn">
+                                4-AC
+                            </button>
+                            <button class="dropdown-btn">
+                                5-AC
+                            </button>
+                        </div>
+                        <button class="dropdown-btn">
+                            In-Table
+                        </button>
+                        <div class="dropdown-container">
+                            <button class="dropdown-btn">
+                                2-AC
+                            </button>
+                            <button class="dropdown-btn">
+                                3-AC
+                            </button>
+                            <button class="dropdown-btn">
+                                4-AC
+                            </button>
+                            <button class="dropdown-btn">
+                                5-AC
+                            </button>
+                        </div>
+                        <button class="dropdown-btn">
+                            Dual In-Table
+                        </button>
+                        <div class="dropdown-container">
+                            <button class="dropdown-btn">
+                                2-AC
+                            </button>
+                            <button class="dropdown-btn">
+                                3-AC
+                            </button>
+                            <button class="dropdown-btn">
+                                4-AC
+                            </button>
+                            <button class="dropdown-btn">
+                                5-AC
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="sidebar-header">
+                    <h3>Information</h3>
+                    <p> information desc.</p>
+                    <p> information desc 2.</p>
+                </div>
+            </nav>
+            <!--Header Nav-->
+            <div class="col-md-10" id="divcontainer">
+                <nav class="hnav">
+                    <strong> Select a Table Box Option</strong>
+                </nav>
+                <!--Image Container-->
+                <div class="container cardRow" id="cardContainer">
+                    <div class="col-md-4 cardRight">
+                        <div class="card mb-4 shadow-lg cardOne">
+                            <img src="clamp-on.jpg" alt="Clamp On" class="imgCard">
+                            <div class="card-body">
+                                <h1>Clamp On</h1>
+                                <p class="card-text">Clamp On desc</p>
+                            </div>
+                        </div>
+                        <div class="card mb-4 shadow-lg cardTwo">
+                            <img src="in-table.jpg" alt="In-Table" class="imgCard">
+                            <div class="card-body">
+                                <h1>In-Table</h1>
+                                <p class="card-text">In-Table desc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 cardLeft">
+                        <div class="card mb-4 shadow-lg cardThree">
+                            <img src="under-table.jpg" alt="Under-Table" class="imgCard">
+                            <div class="card-body">
+                                <h1>Under-Table</h1>
+                                <p class="card-text">Under-Table desc</p>
+                            </div>
+                        </div>
+                        <div class="card mb-4 shadow-lg cardFour">
+                            <img src="dual-in-table.jpg" alt="Dual In-Table" class="imgCard">
+                            <div class="card-body">
+                                <h1>Dual In-Table</h1>
+                                <p class="card-text">Dual In-Table desc</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--Footer-->
+            <!--<div class="col-md-10" id="divcontainer">
+                <nav class="hnav">
+                    <button type="button" class="btn btn-success">
+                        Select Power Configuration >
+                    </button>
+                </nav>
+            </div>-->
+        </div>
+     </div>
+    <br />
+
+    <script>
+
+        $(document).ready(function () {
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+         dropdown[i].addEventListener("click", function() {
+         this.classList.toggle("active");
+         var dropdownContent = this.nextElementSibling;
+         if (dropdownContent.style.display === "block") {
+         dropdownContent.style.display = "none";
+        } else {
+             dropdownContent.style.display = "block";
+         }
+        });
+        }
+            
+
+            $(".SampleBox").on("click", function () {
+            
+            event.preventDefault();
+
+            $("#cardContainer").empty();
+            
+            
+            var newImageTag = $("<img>");
+            var newCardTag = $("<div>");
+            var newCardBody = $("<div>");
+            var header = $("<h1>");
+            var hText = $(this).attr("value");
+
+            console.log(hText);
+            
+            header.text(hText);
+            newImageTag.attr("src", hText);
+            newCardTag.addClass("drop");
+            newCardBody.addClass("card-body");
+
+            newCardTag.append(newImageTag);
+            newCardBody.append(header);
+            newCardTag.append(newCardBody);
+            $("#cardContainer").html(newCardTag)
+
+
+        })
+
+            var draggable = $(".catSnap");
+            var itop = 0;
+            var ileft = 0;
+            var placeSnapOne = false;
+            var placeSnapTwo = false;
+
+
+
+            draggable.on('mousedown', function (e) {
+                var dr = $(this).addClass("drag").css("cursor", "move");
+                height = dr.outerHeight();
+                width = dr.outerWidth();
+                ypos = dr.offset().top + height - e.pageY;
+                xpos = dr.offset().left + width - e.pageX;
+                var hldiv = $("<div>");
+
+                if (placeSnapOne) {
+                    hldiv.attr("id", "filterTwo");
+                } else {
+                    hldiv.attr("id", "filterOne");
+                }
+                $(".drop").append(hldiv);
+                
+
+                console.log("hello mdown");
+
+                $(document.body).on('mousemove', function (e) {
+                    itop = e.pageY + ypos - height;
+                    ileft = e.pageX + xpos - width;
+
+                    console.log("itop: " + itop);
+                    console.log("ileft: " + ileft);
+
+                    if (dr.hasClass("drag")) {
+                        dr.offset({ top: itop, left: ileft });
+                    }
+
+                });
+                
+                dr.on("mouseup", function () {
+                    dr.removeClass("drag");
+                    hldiv.remove();
+                    console.log("hello mup");
+
+                    //if drop near first square lock to first square
+                    if (itop > 150 && itop < 220 && ileft > 1432 && ileft < 1532) {
+                        dr.offset({ top: 190, left: 1481 });
+                        placeSnapOne = true;
+                    }
+
+                    //if drop near 2nd square lock to second square
+                    if (itop > 220.33 && itop < 286.33 && ileft > 1432 && ileft < 1532) {
+                        dr.offset({ top: 256.33, left: 1481 });
+                        placeSnapTwo = true;
+                    }
+
+                });
+
+                
+            });
+            
+     });
+
+    </script>
+
+</body>
+</html>
